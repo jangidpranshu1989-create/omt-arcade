@@ -1193,7 +1193,7 @@ register('meme-maker', {
     canvas.toBlob(async (blob) => {
       const file = new File([blob], 'meme.png', { type:'image/png' });
       if (navigator.canShare && navigator.canShare({ files: [file] })){
-        try { await navigator.share({ files: [file], title: 'Meme' }); } catch {}
+        try { await OMT.share({ files: [file], title: 'Meme' }); } catch {}
       } else {
         toast('Sharing not supported — saved instead');
         const a = document.createElement('a');
@@ -1264,7 +1264,7 @@ register('dialogue-gen', {
   $('#dg-share', root).onclick = () => {
     if (!current) return;
     const txt = `"${current}" — one more try.`;
-    if (navigator.share) navigator.share({ text: txt }).catch(()=>{});
+    if (navigator.share) OMT.share({ text: txt }).catch(()=>{});
     else { navigator.clipboard?.writeText(txt); toast('Copied'); }
   };
 

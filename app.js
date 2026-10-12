@@ -375,3 +375,44 @@ window.OMT = {
   pushRecent, getRecent,
   closeModal,
 };
+
+/* ============================================================
+   SHARE HELPER — auto appends site link to every share
+   ============================================================ */
+(function(){
+  const SHARE_URL = 'https://one-more-try-delta.vercel.app';
+
+  function shareFn(data = {}) {
+    // File sharing (e.g. meme-maker)
+    if (data.files && data.files.length) {
+      if (navigator.canShare && navigator.canShare({ files: data.files })) {
+        return navigator.share(data).catch(() => {});
+      }
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(data.files[0]);
+      link.download = data.files[0].name || 'file';
+      link.click();
+      return;
+    }
+
+    // Text sharing with auto-link
+    const baseText = data.text || '';
+    const text = baseText + (baseText ? '\n\n' : '') + '🔗 ' + SHARE_URL;
+    const payload = { title: data.title || 'one more try.', text };
+
+    if (navigator.share) {
+      navigator.share(payload).catch(() => {
+        navigator.clipboard?.writeText(text);
+        if (window.OMT && window.OMT.toast) window.OMT.toast('Link copied 📋');
+      });
+    } else {
+      navigator.clipboard?.writeText(text);
+      if (window.OMT && window.OMT.toast) window.OMT.toast('Link copied 📋');
+    }
+  }
+
+  if (window.OMT) {
+    window.OMT.share = shareFn;
+    window.OMT.SHARE_URL = SHARE_URL;
+  }
+})();

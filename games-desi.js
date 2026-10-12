@@ -323,7 +323,7 @@ register('spend-crorepati',{
     $('#rcpt-share', body).onclick = () => {
       const txt = lines.map(({it,qty}) => `${it.emoji} ${it.name} ×${qty} — ${fmtINR(it.price*qty)}`).join('\n');
       const full = `🧾 ${current.name} Receipt\n\n${txt}\n\nSpent: ${fmtINR(spent)}\nLeft: ${fmtINR(balance)}`;
-      if (navigator.share) navigator.share({ title:'Receipt', text: full }).catch(()=>{});
+      if (navigator.share) OMT.share({ title:'Receipt', text: full }).catch(()=>{});
       else { navigator.clipboard?.writeText(full); toast('Receipt copied 📋'); }
     };
   }
@@ -575,7 +575,7 @@ register('perfect-circle',{
   $('#pc-share', root).onclick = () => {
     if (!tries){ toast('Draw a circle first!'); return; }
     const txt = `My perfect circle score: ${lastScore}% (best ${best}%) on one more try.`;
-    if (navigator.share) navigator.share({ title:'Perfect Circle', text: txt }).catch(()=>{});
+    if (navigator.share) OMT.share({ title:'Perfect Circle', text: txt }).catch(()=>{});
     else { navigator.clipboard?.writeText(txt); toast('Copied! 📋'); }
   };
 });

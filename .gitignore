@@ -28,3 +28,6 @@ Temporary files
 
 *.tmp
 *.bak
+
+# Local Netlify folder
+.netlify
