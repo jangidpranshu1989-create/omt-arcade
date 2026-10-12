@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>one more try. — Logo Pack</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+    background:#0a0a0a;color:#fafafa;
+    padding:40px 20px;min-height:100vh;
+  }
+  h1{font-size:28px;font-weight:900;letter-spacing:-.5px;text-align:center;margin-bottom:8px}
+  .sub{text-align:center;color:#71717a;font-size:14px;margin-bottom:40px}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:24px;max-width:800px;margin:0 auto;
+  }
+  .cell{text-align:center}
+  .label{
+    font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
+    color:#71717a;margin-bottom:12px;
+  }
+  .logo-wrap{
+    display:inline-flex;align-items:center;justify-content:center;
+    border-radius:50%;overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.05);
+  }
+  .logo-wrap.square{border-radius:22%}
+  .logo-wrap.rounded{border-radius:28%}
+
+  /* Instagram size */
+  .size-ig{width:220px;height:220px;font-size:120px}
+
+  /* Small */
+  .size-sm{width:120px;height:120px;font-size:66px}
+
+  /* Favicon */
+  .size-fav{width:64px;height:64px;font-size:36px}
+
+  /* Dark variant */
+  .logo-dark{background:linear-gradient(135deg,#fafafa 0%,#e4e4e7 100%);color:#0a0a0a}
+  /* Light variant */
+  .logo-light{background:linear-gradient(135deg,#0a0a0a 0%,#27272a 100%);color:#fafafa}
+
+  /* Accent variant */
+  .logo-accent{background:linear-gradient(135deg,#8b5cf6 0%,#ec4899 50%,#f59e0b 100%);color:#fff}
+
+  .mark{
+    font-weight:900;line-height:1;
+    font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+    display:block;
+    transform:translateY(-2px);
+  }
+  .mark svg{width:1em;height:1em;display:block}
+  .note{
+    text-align:center;margin-top:48px;color:#71717a;font-size:12px;
+    line-height:1.7;max-width:520px;margin-left:auto;margin-right:auto;
+    padding:20px;background:rgba(255,255,255,.03);border-radius:16px;
+    border:1px solid rgba(255,255,255,.06);
+  }
+  .note b{color:#fafafa}
+</style>
+</head>
+<body>
+
+<h1>one more try. — Logo Pack</h1>
+<p class="sub">Screenshot karne ke liye ready. Long-press → Save image / Screenshot.</p>
+
+<div class="grid">
+
+  <!-- Primary — Instagram profile -->
+  <div class="cell">
+    <div class="label">Instagram Profile</div>
+    <div class="logo-wrap size-ig logo-light">
+      <span class="mark">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M50 8 L55 45 L92 50 L55 55 L50 92 L45 55 L8 50 L45 45 Z"/>
+          <path d="M20 20 L24 30 L34 34 L24 38 L20 48 L16 38 L6 34 L16 30 Z" opacity=".5"/>
+          <path d="M80 80 L82 86 L88 88 L82 90 L80 96 L78 90 L72 88 L78 86 Z" opacity=".5"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- Accent version -->
+  <div class="cell">
+    <div class="label">Gradient Version</div>
+    <div class="logo-wrap size-ig logo-accent">
+      <span class="mark">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M50 8 L55 45 L92 50 L55 55 L50 92 L45 55 L8 50 L45 45 Z"/>
+          <path d="M20 20 L24 30 L34 34 L24 38 L20 48 L16 38 L6 34 L16 30 Z" opacity=".6"/>
+          <path d="M80 80 L82 86 L88 88 L82 90 L80 96 L78 90 L72 88 L78 86 Z" opacity=".6"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- Simple asterisk -->
+  <div class="cell">
+    <div class="label">Simple Asterisk</div>
+    <div class="logo-wrap size-ig logo-light">
+      <span class="mark" style="font-size:1em">✳</span>
+    </div>
+  </div>
+
+  <!-- Square rounded (app icon) -->
+  <div class="cell">
+    <div class="label">Rounded Square</div>
+    <div class="logo-wrap size-ig rounded logo-accent">
+      <span class="mark">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M50 8 L55 45 L92 50 L55 55 L50 92 L45 55 L8 50 L45 45 Z"/>
+          <path d="M20 20 L24 30 L34 34 L24 38 L20 48 L16 38 L6 34 L16 30 Z" opacity=".6"/>
+          <path d="M80 80 L82 86 L88 88 L82 90 L80 96 L78 90 L72 88 L78 86 Z" opacity=".6"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- Small preview -->
+  <div class="cell">
+    <div class="label">Small Size</div>
+    <div class="logo-wrap size-sm logo-accent">
+      <span class="mark">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M50 8 L55 45 L92 50 L55 55 L50 92 L45 55 L8 50 L45 45 Z"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- Favicon -->
+  <div class="cell">
+    <div class="label">Favicon</div>
+    <div class="logo-wrap size-fav logo-accent">
+      <span class="mark">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M50 8 L55 45 L92 50 L55 55 L50 92 L45 55 L8 50 L45 45 Z"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+
+</div>
+
+<div class="note">
+  <b>Kaise use karo:</b><br>
+  1. Long-press logo → Save image<br>
+  2. Instagram → Profile → Edit → Change photo<br>
+  3. Gradient version (purple-pink-orange) Instagram pe sabse acha dikhta hai<br>
+  4. Favicon ke liye screenshot lo → 64×64 crop karo
+</div>
+
+</body>
+</html>
